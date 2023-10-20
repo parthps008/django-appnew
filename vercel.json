@@ -1,0 +1,17 @@
+{
+    "builds": [
+        {
+            "src": "/s3gentech_project/wegi.py",
+            "use": "@vercel/python",
+            "config":{ "maxLambdasize":"15mb", "runtime":"python3.9"}
+        }
+    ],
+    "routes": [
+        {
+            "src":"/(.*)",
+            "dest":"s3gentech_project/wegi.py"
+        }
+        
+
+    ]
+}
